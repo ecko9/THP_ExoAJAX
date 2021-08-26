@@ -1,0 +1,17 @@
+console.log("js show");
+if (document.querySelector('#c-right > h2')) {
+  document.querySelector('#c-right > h2').remove();
+}
+
+if (document.querySelector('#c-right > p')) {
+  document.querySelector('#c-right > p').remove(); 
+}
+
+if (document.querySelector('#c-right > button')) {
+  document.querySelector('#c-right > button').remove();
+  document.querySelector('#c-right > button').remove();
+}
+
+console.log(<%=@indexEmail%>);
+document.getElementById('c-right').insertAdjacentHTML("beforeend","<%= j render 'email_content', email: @email %>");
+document.querySelector('#c-left > ul').children[<%=@indexEmail%>].firstElementChild.classList.add('link-secondary');

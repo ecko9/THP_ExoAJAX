@@ -1,0 +1,25 @@
+<h1>Emails#index</h1>
+
+<div class="container-fluid d-flex flex-direction-column justify-content-center bg-dark">
+  <div class="raw container-fluid d-flex flex-raw justify-content-center">
+
+    <div id= "c-left" class="col-lg-4 bg-light m-1 py-2 d-flex justify-content-center align-items-center flex-column">
+      <h2>Mails</h2>
+      <ul>
+        <% @emails.each do |email| %>
+            <li><%= link_to "#{email.object}", email_path(id: email), remote: true %></li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div id= "c-right" class="col-lg-7 bg-light m-1 py-2 d-flex justify-content-start flex-column align-items-center">
+      <h2></h2>
+      <p></p>
+    </div>
+
+  </div> 
+</div>
+
+<div class="container-fluid d-flex flex-direction-column justify-content-center bg-dark">
+    <button class="btn btn-warning"><%= link_to 'CREER', emails_path, method: :post, remote: true %></button>
+</div>

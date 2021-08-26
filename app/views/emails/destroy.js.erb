@@ -1,0 +1,9 @@
+document.querySelector('#c-right > h2').remove();
+document.querySelector('#c-right > p').remove();
+if (document.querySelector('#c-right > button') == null) {
+  console.log("test")
+}
+else {
+  document.querySelector('#c-right > button').remove();
+}
+document.querySelector('#c-left > ul').children[<%= @indexEmail %>].remove();
